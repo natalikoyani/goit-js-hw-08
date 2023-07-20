@@ -13,7 +13,6 @@ form.addEventListener('input', throttle(saveData, 500));
 form.addEventListener('submit', onSubmit);
 
 function saveData() {
-
     localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify({email: formEmail.value, message: formMessage.value}));
 }
 
