@@ -27,10 +27,11 @@ function onSubmit(e) {
 }
 
 function updateInputs() {
-    try{
-        formEmail.value = parsedData.email ?? "";
-        formMessage.value = parsedData.message ?? "";
-    } catch(err) {
-        console.log(err);
-    }
+        if(parsedData === null) {
+            formEmail.value = "";
+            formMessage.value = "";
+        } else {
+            formEmail.value = parsedData.email;
+            formMessage.value = parsedData.message;
+        } 
 }
